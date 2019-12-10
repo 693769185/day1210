@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--引入vue的核心外部文件-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="radio" value="hu" name="star" v-model="name" />胡歌
+        <input type="radio" value="tian" name="star" v-model="name" />景天
+        <input type="radio" value="li" name="star" v-model="name" />李逍遥
+        <img v-if="name=='hu'" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=467201787,1425642994&fm=26&gp=0.jpg">
+        <img v-else-if="name=='tian'" src="http://img5.imgtn.bdimg.com/it/u=3118916108,3063402463&fm=15&gp=0.jpg">
+        <img v-else-if="name=='li'" src="http://img1.imgtn.bdimg.com/it/u=1093483091,1983892724&fm=26&gp=0.jpg">
+    </div>
+    <script>
+        var app=new Vue({
+            el:"#app",
+            data:{
+                show:'false',
+                name:""
+            }
+        });
+    </script>
+</body>
+</html>
